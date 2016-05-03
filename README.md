@@ -10,7 +10,12 @@ Git の使い方や GitHub の仕様についてわかったことや、コミ�
 `$ git filter-branch -f --env-filter "GIT_AUTHOR_NAME='ユーザ名'; GIT_AUTHOR_EMAIL='メールアドレス'; GIT_COMMITTER_NAME='ユーザ名'; GIT_COMMITTER_EMAIL='メールアドレス';" HEAD`  
 `$ git push --force -u origin master`  
 歴史が変わってしまうので注意  
-参考: http://qiita.com/sea_mountain/items/d70216a5bc16a88ed932
+参考: <a href="http://qiita.com/sea_mountain/items/d70216a5bc16a88ed932" target="_blank">Git の Commit Author と Commiter を変更する</a>
+### 直前のコミットの変更点を上書きする
+`$ git commit --amend`
+`$ git push --force -u origin master`  
+歴史が変わってしまうので注意  
+コミットメッセージを書きかえたいときや新たなコミットとするまでもない変更をしたときに使う
 
 ## メモ
 * ファイルを間違えてコミットしたあとに .gitignore を追加してもそのファイルは GitHub 上では表示されたまま
