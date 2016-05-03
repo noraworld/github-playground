@@ -4,8 +4,13 @@ Git の使い方や GitHub の仕様についてわかったことや、コミ�
 
 ## Gitコマンドチップ
 ### ローカルには残し、GitHub 上からは削除したい場合
-`git rm --cached [ファイル名]` または `git rm -r --cached [ディレクトリ名]`  
+`$ git rm --cached [ファイル名]` または `$ git rm -r --cached [ディレクトリ名]`  
 ただし、歴史は残るので注意
+### 過去に違うユーザ名やメールアドレスでプッシュしたものをすべて統一する場合 (歴史改竄)
+`$ git filter-branch -f --env-filter "GIT_AUTHOR_NAME='ユーザ名'; GIT_AUTHOR_EMAIL='メールアドレス'; GIT_COMMITTER_NAME='ユーザ名'; GIT_COMMITTER_EMAIL='メールアドレス';" HEAD`  
+`$ git push --force -u origin master`  
+歴史が変わってしまうので注意  
+参考: http://qiita.com/sea_mountain/items/d70216a5bc16a88ed932
 
 ## メモ
 * ファイルを間違えてコミットしたあとに .gitignore を追加してもそのファイルは GitHub 上では表示されたまま
