@@ -31,11 +31,6 @@ Git の使い方や GitHubの仕様についてわかったことや、コミッ
 
 ### 直前のコミットに戻る (svn revert に相当)
 `$ git checkout [ファイル名]`  
-GitHub に公開されている最新の状態に戻りたい場合は `$ git pull`
-
-コミットとプッシュをセットでやっている場合はどちらも同じになる。  
-ローカルリポジトリの最新に戻りたいときは `git checkout`  
-リモートリポジトリ (GitHub) の最新に戻りたいときは `git pull`
 
 参考: [Git の変更を元に戻す](https://www.atlassian.com/ja/git/tutorial/undoing-changes)
 
