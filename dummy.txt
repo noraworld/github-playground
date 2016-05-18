@@ -1,1 +1,1 @@
-過去の log を遡って、すべての Author と Commiter を統一 (歴史改竄)
+git pull の確認
