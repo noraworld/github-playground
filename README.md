@@ -70,3 +70,6 @@ GitHub に登録しているメールアドレスを git config で登録して�
 * :white_check_mark: `:white_check_mark:` → 意図した通りにコミットされているか確認 (このリポジトリのみ)
 
 参考: [Emoji cheat sheet fot GitHub](http://www.emoji-cheat-sheet.com)
+
+## 画像URL参照確認
+![参照できるかチェック](https://github.com/secondnoraworld/github-playground/blob/master/octocat.png)
