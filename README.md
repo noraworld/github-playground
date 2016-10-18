@@ -72,4 +72,4 @@ GitHub に登録しているメールアドレスを git config で登録して�
 参考: [Emoji cheat sheet fot GitHub](http://www.emoji-cheat-sheet.com)
 
 ## 画像URL参照確認
-![参照できるかチェック](https://github.com/secondnoraworld/github-playground/blob/master/octocat.png)
+![参照できるかチェック](https://github.com/secondnoraworld/github-playground/blob/3578784ee1fcfbab8dd3242652042c7121330709/octocat.png)
