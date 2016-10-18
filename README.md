@@ -64,12 +64,15 @@ GitHub に登録しているメールアドレスを git config で登録して�
 
 ## コミットメッセージの個人的な絵文字ルール
 * :tada: `:tada:` → Initial commit
-* :sparkles: `:sparkles:` → 新規ファイルの追加
-* :pencil2: `:pencil2:` → ファイルの修正
-* :fire: `:fire:` → ファイルの削除
+* :sparkles: `:sparkles:` → 新しいファイルや機能の追加
+* :pencil2: `:pencil2:` → 機能の修正
+* :art: `:art:` → コードのフォーマットの修正
+* :fire: `:fire:` → ファイルや機能の削除
 * :white_check_mark: `:white_check_mark:` → 意図した通りにコミットされているか確認 (このリポジトリのみ)
 
 参考: [Emoji cheat sheet fot GitHub](http://www.emoji-cheat-sheet.com)
 
-## 画像URL参照確認
+## READMEから画像を参照するとき
 ![参照できるかチェック](https://github.com/secondnoraworld/github-playground/blob/3578784ee1fcfbab8dd3242652042c7121330709/octocat.png)
+
+該当する画像を削除してしまうと当然参照することができなくなる。しかしその画像を削除する前のコミットの画像を参照すれば削除してしまった画像でもREADMEから参照することができる。
