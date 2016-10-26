@@ -68,7 +68,9 @@ GitHub に登録しているメールアドレスを git config で登録して�
 * :pencil2: `:pencil2:` → 機能の修正
 * :art: `:art:` → コードのフォーマットの修正
 * :fire: `:fire:` → ファイルや機能の削除
-* :white_check_mark: `:white_check_mark:` → 意図した通りにコミットされているか確認 (このリポジトリのみ)
+* ~~:white_check_mark: `:white_check_mark:` → 意図した通りにコミットされているか確認 (このリポジトリのみ)~~
+
+:warning: このリポジトリはGit/GitHubの使い方や仕様を確認することがほとんどであるため、`:white_check_mark` を使うとほとんどがこの絵文字になってしまうので46コミットめでやめました。
 
 参考: [Emoji cheat sheet fot GitHub](http://www.emoji-cheat-sheet.com)
 
