@@ -78,3 +78,12 @@ GitHub に登録しているメールアドレスを git config で登録して�
 ![参照できるかチェック](https://github.com/secondnoraworld/github-playground/blob/3578784ee1fcfbab8dd3242652042c7121330709/octocat.png)
 
 該当する画像を削除してしまうと当然参照することができなくなる。しかしその画像を削除する前のコミットの画像を参照すれば削除してしまった画像でもREADMEから参照することができる。
+
+## git alias を設定する際の注意点
+エイリアスを使用すると Git のサブコマンドを自由に設定することができるが、**既存のサブコマンドを上書きすることはできない**。たとえば、以下のように `push` サブコマンドを上書きすることはできない。
+
+```bash
+$ git config --global alias.push '!echo "Pushing into branch $(git rev-parse --abbrev-ref HEAD)..." && git push -u origin $(git rev-parse --abbrev-ref HEAD)'
+```
+
+この状態で `git push` すると、通常通りの `git push` が実行されてしまうので注意！
