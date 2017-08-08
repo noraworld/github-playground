@@ -7,3 +7,4 @@ Issueを閉じたい(2回目)
 master 以外のブランチでプッシュするときに git push -u origin HEAD を使う
 master も git push -u origin HEAD を試してみる
 alias に git push -u origin $(git rev-parse --abbrev-ref HEAD) をセットした状態で master にプッシュしてみる
+alias に git push -u origin $(git rev-parse --abbrev-ref HEAD) をセットした状態で master にプッシュしてみる (2 回目)
