@@ -5,3 +5,4 @@ Issueを閉じたい
 Issueを閉じたい(2回目)
 新しいファイルの追加やファイルの変更がある状態で空コミットをしたい
 master 以外のブランチでプッシュするときに git push -u origin HEAD を使う
+master も git push -u origin HEAD を試してみる
