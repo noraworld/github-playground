@@ -1,3 +1,6 @@
+# Foo
+This is a mermaid 🧜‍♀️
+
 ```mermaid
 flowchart TB
     c1-->a2
