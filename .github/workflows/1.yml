@@ -1,0 +1,19 @@
+name: concurrency test
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  concurrency_test:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: concurrency-test
+      cancel-in-progress: false
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: concurrency test
+        run: |
+          echo "Comment: ${{ github.event.comment.body }}"
