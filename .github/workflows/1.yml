@@ -1,19 +1,63 @@
-name: concurrency test
+name: Social Media Recorder
 
 on:
   issue_comment:
     types: [created]
 
 jobs:
-  concurrency_test:
+  build:
     runs-on: ubuntu-latest
     concurrency:
       group: concurrency-test
-      cancel-in-progress: false
+      cancel-in-progress: true
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v3
+      # # "2024-03-05_sleep_睡眠記録" => "2024"
+      # - name: Get a year
+      #   run: echo "YEAR=$(cut -d '-' -f1 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
 
-      - name: concurrency test
-        run: |
-          echo "Comment: ${{ github.event.comment.body }}"
+      # # "2024-03-05_sleep_睡眠記録" => "03"
+      # - name: Get a month
+      #   run: echo "MONTH=$(cut -d '-' -f2 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # # "2024-03-05_sleep_睡眠記録" => "2024-03-05"
+      # - name: Get a date
+      #   run: echo "DATE=$(cut -d '_' -f1 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # # "2024-03-05_sleep_睡眠記録" => "sleep"
+      # - name: Get a category
+      #   run: echo "CATEGORY=$(cut -d '_' -f2 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      # # "2024-03-05_sleep_睡眠記録" => "睡眠記録"
+      # - name: Get a title
+      #   run: echo "TITLE=$(cut -d '_' -f3 <<< "${{ github.event.issue.title }}")" >> $GITHUB_ENV
+
+      - name: Social Media Recorder
+        uses: noraworld/github-actions-sandbox@main
+        with:
+          # mode: "file"
+          # filepath: _posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ github.event.issue.title }}-.md
+          # filepath: "issues/${{ github.event.issue.number }}_${{ github.event.issue.title }}.md"
+          # filepath: ${{ env.CATEGORY }}/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md
+          # committer_name: Kosuke Aoki
+          # committer_email: mail@noraworld.com
+          # overwrite_when_modified: true
+          # extra_text_when_modified: "# issue からこんにちはです"
+          # notification_comment: このタスクの内容は [`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>)) に保存されました。
+          # target_file_repo: noraworld/diary
+          # title_prefix_for_file: 😠
+          target_issue_repo: noraworld/github-actions-sandbox
+          target_issue_number: 214
+          # fold_threshold: 0
+          # fold_summary: ここをクリックすると展開できます
+          # title_prefix_for_issue: 🐯
+          # with_date: true
+          # timezone: Asia/Tokyo
+          # time_format: h:mm a · MMM d, yyyy (ZZZZ)
+          # with_header: "---\r\nid: <NUMBER>\r\ntitle: <TITLE>\r\nassignees: <ASSIGNEES>\r\nlabels: <LABELS>\r\ncreated_at: <CREATED_AT>\r\n---"
+          # with_title: true
+          # custom_title: ${{ env.TITLE }}
+          # with_quote: issue
+          # skip_body: "file, issue"
+          # personal_access_token: GH_TOKEN
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
