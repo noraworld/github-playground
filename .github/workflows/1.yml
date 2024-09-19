@@ -1,4 +1,4 @@
-name: Social Media Recorder
+name: Comments Transferor
 
 on:
   issue_comment:
@@ -9,36 +9,14 @@ jobs:
     if: ${{ github.event.issue.number == 6 }}
     runs-on: ubuntu-latest
     concurrency:
-      group: concurrency-test
+      group: comments-transferor
       cancel-in-progress: true
     steps:
-      - name: Social Media Recorder
-        uses: noraworld/github-actions-sandbox@main
+      - name: Transfer comments
+        uses: noraworld/comments-transferor@main
         with:
-          # mode: "file"
-          # filepath: _posts/${{ env.YEAR }}/${{ env.MONTH }}/${{ github.event.issue.title }}-.md
-          # filepath: "issues/${{ github.event.issue.number }}_${{ github.event.issue.title }}.md"
-          # filepath: ${{ env.CATEGORY }}/${{ env.YEAR }}/${{ env.MONTH }}/${{ env.DATE }}-.md
-          # committer_name: Kosuke Aoki
-          # committer_email: mail@noraworld.com
-          # overwrite_when_modified: true
-          # extra_text_when_modified: "# issue からこんにちはです"
-          # notification_comment: このタスクの内容は [`<FILE_PATH>`](<FILE_URL_WITH_SHA>) ([<REF_NAME>](<FILE_URL>)) に保存されました。
-          # target_file_repo: noraworld/diary
-          # title_prefix_for_file: 😠
           target_issue_repo: noraworld/github-actions-sandbox
           target_issue_number: 214
-          # fold_threshold: 0
-          # fold_summary: ここをクリックすると展開できます
-          # title_prefix_for_issue: 🐯
-          # with_date: true
-          # timezone: Asia/Tokyo
-          # time_format: h:mm a · MMM d, yyyy (ZZZZ)
-          # with_header: "---\r\nid: <NUMBER>\r\ntitle: <TITLE>\r\nassignees: <ASSIGNEES>\r\nlabels: <LABELS>\r\ncreated_at: <CREATED_AT>\r\n---"
-          # with_title: true
-          # custom_title: ${{ env.TITLE }}
-          # with_quote: issue
-          # skip_body: "file, issue"
           personal_access_token: GH_TOKEN
           replace_twitter_short_url: true
           trim_empty_image_tag: true
