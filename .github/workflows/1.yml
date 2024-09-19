@@ -15,8 +15,10 @@ jobs:
       - name: Transfer comments
         uses: noraworld/comments-transferor@main
         with:
-          target_issue_repo: noraworld/github-actions-sandbox
-          target_issue_number: 214
+          # target_issue_repo: noraworld/github-actions-sandbox
+          # target_issue_number: 214
+          target_issue_repo: noraworld/diary
+          target_issue_number: latest
           personal_access_token: GH_TOKEN
           replace_twitter_short_url: true
           trim_empty_image_tag: true
