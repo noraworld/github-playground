@@ -59,5 +59,7 @@ jobs:
           # with_quote: issue
           # skip_body: "file, issue"
           personal_access_token: GH_TOKEN
+          replace_twitter_short_url: true
+          trim_empty_image_tag: true
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
