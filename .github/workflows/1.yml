@@ -58,6 +58,6 @@ jobs:
           # custom_title: ${{ env.TITLE }}
           # with_quote: issue
           # skip_body: "file, issue"
-          # personal_access_token: GH_TOKEN
+          personal_access_token: GH_TOKEN
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
