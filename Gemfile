@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
-gem "jekyll-commonmark"
+# gem "jekyll-commonmark"
 
 gem 'jemoji'
 gem 'minima'
