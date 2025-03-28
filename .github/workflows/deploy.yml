@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: action
         uses: noraworld/github-actions-sandbox@main
-        with:
+        # with:
           # use_ruby_version: true
           # use_gemfile: true
 
