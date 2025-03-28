@@ -22,8 +22,8 @@ jobs:
       - name: action
         uses: noraworld/github-actions-sandbox@main
         with:
-          use_ruby_version: true
-          use_gemfile: true
+          # use_ruby_version: true
+          # use_gemfile: true
 
   deploy:
     needs: build
