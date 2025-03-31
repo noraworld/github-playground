@@ -1,11 +1,9 @@
-# uses
-
-name: Build and Deploy Jekyll with GitHub Actions
+name: Build and Deploy
 
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 permissions:
@@ -21,11 +19,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build with Jekyll
-        uses: noraworld/github-actions-sandbox@main
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          use_ruby_version: false
-          use_gemfile: false
+          path: /
 
   deploy:
     needs: build
